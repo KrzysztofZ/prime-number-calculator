@@ -26,7 +26,7 @@ public class SievePrimeCalculatorServiceTest {
 
         List<Integer> result =  new SievePrimeCalculatorService().calculate(31);
 
-        assertArrayEquals(new Integer[]{2,3,5, 7, 11, 13, 17, 19, 23, 29}, result.toArray(new Integer[0]));
+        assertArrayEquals(new Integer[]{2,3,5, 7, 11, 13, 17, 19, 23, 29, 31}, result.toArray(new Integer[0]));
     }
 
     @Test
