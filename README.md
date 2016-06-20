@@ -29,7 +29,7 @@ localhost:8080/prime-calc/{n}/naive
 localhost:8080/prime-calc/{n}/sieve
 ```
 
-{n} is non-negative integer
+{n} is non-negative integer in range of (1, 2147483647) exclusive.
 
 The following 3 algorithms have been implemented:
 * Trial division
