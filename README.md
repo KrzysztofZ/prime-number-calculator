@@ -17,7 +17,7 @@ mvn test will run all unit tests and integration tests.
 ### Startup instructions
 java -jar ./target/prime-number-calculator-1.0-SNAPSHOT.jar
 
-### calling rest service instructions
+### Calling rest service
 Following endpoints are available after application has been started:
 
 ```
