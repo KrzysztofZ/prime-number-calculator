@@ -24,9 +24,9 @@ public class DivisionPrimeCalculatorServiceTest {
     @Test
     public void testCalculateOdd() throws Exception {
 
-        List<Integer> result =  new DivisionPrimeCalculatorService().calculate(30);
+        List<Integer> result =  new DivisionPrimeCalculatorService().calculate(31);
 
-        assertArrayEquals(new Integer[]{2,3,5, 7, 11, 13, 17, 19, 23, 29}, result.toArray(new Integer[0]));
+        assertArrayEquals(new Integer[]{2,3,5, 7, 11, 13, 17, 19, 23, 29, 31}, result.toArray(new Integer[0]));
     }
 
     @Test
