@@ -14,9 +14,7 @@ public class DivisionPrimeCalculatorService implements IPrimeCalculatorService {
 
     @Override
     public List<Integer> calculate(int n) {
-        if(n<=1) {
-            throw new IllegalArgumentException("n needs to be positive and greater than one");
-        }
+        validateInput(n);
         List<DivisionPrimeChecker> chunkCheckers = initilize(n);
 
         buildCheckers(n, chunkCheckers);
@@ -24,6 +22,15 @@ public class DivisionPrimeCalculatorService implements IPrimeCalculatorService {
         waitForCalculations(latch);
 
         return convertResults(n);
+    }
+
+    private void validateInput(int n) {
+        if(n <= 1) {
+            throw new IllegalArgumentException("n needs to be positive and greater than one");
+        }
+        if(n > Integer.MAX_VALUE - 1) {
+            throw new IllegalArgumentException("n cannot be greater than 2147483646");
+        }
     }
 
     private List<DivisionPrimeChecker> initilize(int n) {

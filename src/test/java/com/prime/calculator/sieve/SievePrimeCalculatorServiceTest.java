@@ -1,6 +1,7 @@
 package com.prime.calculator.sieve;
 
 import com.prime.calculator.division.DivisionPrimeCalculatorService;
+import org.junit.Ignore;
 import org.junit.Test;
 
 import java.util.List;
@@ -17,6 +18,11 @@ public class SievePrimeCalculatorServiceTest {
     @Test(expected = IllegalArgumentException.class)
     public void testCalculateOne() throws Exception {
         List<Integer> result =  new SievePrimeCalculatorService().calculate(1);
+    }
+
+    @Test(expected = IllegalArgumentException.class)
+    public void testCalculateMax() throws Exception {
+        List<Integer> result =  new SievePrimeCalculatorService().calculate(Integer.MAX_VALUE);
     }
 
     @Test

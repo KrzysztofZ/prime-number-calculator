@@ -1,5 +1,6 @@
 package com.prime.calculator.division;
 
+import org.junit.Ignore;
 import org.junit.Test;
 
 import java.util.List;
@@ -16,6 +17,11 @@ public class DivisionPrimeCalculatorServiceTest {
     @Test(expected = IllegalArgumentException.class)
     public void testCalculateOne() throws Exception {
         List<Integer> result =  new DivisionPrimeCalculatorService().calculate(1);
+    }
+
+    @Test(expected = IllegalArgumentException.class)
+    public void testCalculateMax() throws Exception {
+        List<Integer> result =  new DivisionPrimeCalculatorService().calculate(Integer.MAX_VALUE);
     }
 
     @Test
