@@ -2,6 +2,7 @@ package com.prime.calculator.sieve;
 
 import com.prime.calculator.IPrimeChecker;
 import com.prime.calculator.division.IPrimeCalculatorService;
+import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -9,6 +10,7 @@ import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.CountDownLatch;
 import java.util.stream.IntStream;
 
+@Service
 public class SievePrimeCalculatorService implements IPrimeCalculatorService {
     @Override
     public List<Integer> calculate(int n) {

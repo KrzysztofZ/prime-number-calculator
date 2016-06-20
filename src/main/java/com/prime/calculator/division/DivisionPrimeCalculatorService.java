@@ -1,6 +1,7 @@
 package com.prime.calculator.division;
 
 import com.prime.calculator.IPrimeChecker;
+import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -8,6 +9,7 @@ import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.CountDownLatch;
 import java.util.stream.IntStream;
 
+@Service
 public class DivisionPrimeCalculatorService implements IPrimeCalculatorService {
 
     @Override
