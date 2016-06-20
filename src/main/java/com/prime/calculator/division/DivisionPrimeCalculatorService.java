@@ -1,5 +1,7 @@
 package com.prime.calculator.division;
 
+import com.prime.calculator.IPrimeChecker;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
@@ -39,7 +41,7 @@ public class DivisionPrimeCalculatorService implements IPrimeCalculatorService {
 
     private CountDownLatch runComputations(List<DivisionPrimeChecker> chunkCheckers) {
         CountDownLatch latch = new CountDownLatch(chunkCheckers.size());
-        for (DivisionPrimeChecker primeChecker : chunkCheckers) {
+        for (IPrimeChecker primeChecker : chunkCheckers) {
             CompletableFuture.runAsync(() -> primeChecker.check())
                     .thenAccept(result -> {
                         latch.countDown();
