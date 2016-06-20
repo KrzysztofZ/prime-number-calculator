@@ -35,3 +35,6 @@ The following 3 algorithms have been implemented:
 * Trial division
 * Brute force(naive)
 * Sieve of Eratosthenes
+
+### Limitations
+Big integer may cause memory problems depending on the hardware the application is run.
