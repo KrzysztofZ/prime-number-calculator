@@ -14,6 +14,9 @@ This is a standalone Spring Boot App. No additional configuration is required fo
 ### Unit and Integration Tests
 mvn test will run all unit tests and integration tests.
 
+### Build and package instructions
+mvn package will create jar file
+
 ### Startup instructions
 java -jar ./target/prime-number-calculator-1.0-SNAPSHOT.jar
 
