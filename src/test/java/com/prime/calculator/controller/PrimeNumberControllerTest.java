@@ -53,6 +53,12 @@ public class PrimeNumberControllerTest {
         mvc.perform(get("/prime-calc/" + n + "/division")).andExpect(status().isInternalServerError());
     }
 
+    @Test(expected = NestedServletException.class)
+    public void testComputeOneDivision() throws Exception {
+        final int n = 1;
+        mvc.perform(get("/prime-calc/" + n + "/division")).andExpect(status().isInternalServerError());
+    }
+
     @Test
     public void testComputePrimesSimpleNaive() throws Exception {
         final int n = 6;
@@ -73,6 +79,12 @@ public class PrimeNumberControllerTest {
         mvc.perform(get("/prime-calc/" + n + "/naive")).andExpect(status().isInternalServerError());
     }
 
+    @Test(expected = NestedServletException.class)
+    public void testComputeOneNaive() throws Exception {
+        final int n = 1;
+        mvc.perform(get("/prime-calc/" + n + "/naive")).andExpect(status().isInternalServerError());
+    }
+
     @Test
     public void testComputePrimesSieveOfEratosthenes() throws Exception {
         final int n = 5;
@@ -90,6 +102,12 @@ public class PrimeNumberControllerTest {
     @Test(expected = NestedServletException.class)
     public void testComputeNegativeSieveOfEratosthenes() throws Exception {
         final int n = -237;
+        mvc.perform(get("/prime-calc/" + n + "/sieve")).andExpect(status().isInternalServerError());
+    }
+
+    @Test(expected = NestedServletException.class)
+    public void testComputeOneSieveOfEratosthenes() throws Exception {
+        final int n = 1;
         mvc.perform(get("/prime-calc/" + n + "/sieve")).andExpect(status().isInternalServerError());
     }
 }

@@ -13,6 +13,11 @@ public class DivisionPrimeCalculatorServiceTest {
         List<Integer> result =  new DivisionPrimeCalculatorService().calculate(-30);
     }
 
+    @Test(expected = IllegalArgumentException.class)
+    public void testCalculateOne() throws Exception {
+        List<Integer> result =  new DivisionPrimeCalculatorService().calculate(1);
+    }
+
     @Test
     public void testCalculateSmall() throws Exception {
 

@@ -15,8 +15,8 @@ public class NaivePrimeCalculatorService implements IPrimeCalculatorService {
 
     @Override
     public List<Integer> calculate(int n) {
-        if(n<=0) {
-            throw new IllegalArgumentException("n needs to be positive.");
+        if(n<=1) {
+            throw new IllegalArgumentException("n needs to be positive and greater than one.");
         }
         List<NaivePrimeChecker> chunkCheckers = initilize(n);
 

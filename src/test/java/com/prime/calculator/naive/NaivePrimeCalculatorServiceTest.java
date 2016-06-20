@@ -1,5 +1,6 @@
 package com.prime.calculator.naive;
 
+import com.prime.calculator.division.DivisionPrimeCalculatorService;
 import org.junit.Test;
 
 import java.util.List;
@@ -11,6 +12,11 @@ public class NaivePrimeCalculatorServiceTest {
     @Test(expected = IllegalArgumentException.class)
     public void testCalculateNegative() throws Exception {
         List<Integer> result =  new NaivePrimeCalculatorService().calculate(-30);
+    }
+
+    @Test(expected = IllegalArgumentException.class)
+    public void testCalculateOne() throws Exception {
+        List<Integer> result =  new NaivePrimeCalculatorService().calculate(1);
     }
 
     @Test
